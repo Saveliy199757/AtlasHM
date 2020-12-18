@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css" type="text/css">
     <title>ATLAS HOTEL MANAGEMENT</title>
 </head>
@@ -297,6 +298,39 @@
     <p class="text">Политика конфиденциальности</p>
 
 </div>
+<div class="mobile">
+    <div>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <nav>
+   <ul>
+       <li><a href="">Услуги</a> </li>
+   </ul>
+        <ul>
+            <li> <p><a href="tel:+74993408440">8 861 204 19 29</a> </p></li>
+            <li>
+                <p><a href="tel:+79255858440">atlas@a-ht.ru</a> </p>
+            </li>
+        </ul>
+
+    </nav>
+</div>
+
+
+<script src="js/jquery.js"></script>
+
+<script>
+    $('.mobile div').on('click', () => {
+        $('.mobile div').toggleClass('active');
+        $('.mobile nav').toggleClass('open');
+        $('.mobile nav ul').toggleClass('show');
+    });
+    for (let a = 1; a <= $(".mobile ul li").length; a++){
+        $(".mobile ul li:nth-child("+ a +")").css("animation-delay", "."+ (a+1) +"s");
+    }
+</script>
 
 </body>
 </html>
