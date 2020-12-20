@@ -27,7 +27,7 @@
             <a  class="mail" href="">atlas@a-ht.ru</a>
         </div>
         <div class="callback__btn">
-            <button class="btn btn__white" type="button">Обратный звонок</button>
+            <button class="btn btn__white" type="button" onclick="modalHandlerOpen('ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК', 'modal__contact')">Обратный звонок</button>
         </div>
     </div>
 
@@ -37,14 +37,14 @@
     <div class="baner__text">
         <h1>ATLAS HOTEL MANAGEMENT</h1>
         <p>Профессиональный инструмент поддержки отелей. <br> Закажите бесплатный аудит своего гостиничного сервиса.</p>
-        <button class="btn btn__blue baner__btn">заказать аудит</button>
+        <button class="btn btn__blue baner__btn" onclick="modalHandlerOpen('Заказать аудит гостинечного бизнеса', 'modal__other')">заказать аудит</button>
     </div>
     <div class="imgFull">
         <img src="img/baner.png">
     </div>
 </div>
 <section class="container_m">
-       <h2>формат сотрудничеств</h2>
+       <h2>формат сотрудничествa</h2>
     <p class="sub_h2">
         Выберите наиболее интересный для себя формат
     </p>
@@ -52,19 +52,19 @@
         <div class="cooperation__item">
             <p class="title"> Управление</p>
             <p class="sub_title">Управляем отелем в интересах собственника и всегда индивидуально подходим к каждому отелю</p>
-            <button class="btn btn__grey" type="button">Выбрать формат</button>
+            <button class="btn btn__grey" type="button" onclick="modalHandlerOpen('Формат сотрудничества «управление»', 'modal__other')">Выбрать формат</button>
             <p class="sub-line-text">Оптимальный вариант инвестирования для получения пассивного дохода</p>
         </div>
         <div class="cooperation__item">
             <p class="title">Консалтинг</p>
             <p class="sub_title">Предоставляем комплекс услуг по планированию, созданию и реализации объектов в сфере гостиничного бизнеса</p>
-            <button class="btn btn__grey" type="button">Выбрать формат</button>
+            <button class="btn btn__grey" type="button" onclick="modalHandlerOpen('Формат сотрудничества «Консалтинг»', 'modal__other')">Выбрать формат</button>
             <p class="sub-line-text">Самый популярный и доступный вариант</p>
         </div>
         <div class="cooperation__item">
             <p class="title">Обучение</p>
             <p class="sub_title">Проведем разовое обучение</p>
-            <button class="btn btn__grey" type="button">Выбрать формат</button>
+            <button class="btn btn__grey" type="button" onclick="modalHandlerOpen('Формат сотрудничества «Обучение»', 'modal__other')" >Выбрать формат</button>
             <p class="sub-line-text">Как вариант</p>
         </div>
     </div>
@@ -166,7 +166,7 @@
    <div class="calck">
        <h2>Рассчитать стоимость услуг</h2>
        <div class="arrow arrow__calck"></div>
-       <button class="btn btn__blue btn__calck">Рассчитать стоимость</button>
+       <button class="btn btn__blue btn__calck" onclick="modalHandlerOpen('Рассчитать стоимость услуг', 'modal__other')">Рассчитать стоимость</button>
    </div>
 </section>
 
@@ -288,7 +288,7 @@
             <a  class="mail" href="">atlas@a-ht.ru</a>
         </div>
         <div class="callback__btn">
-            <button class="btn btn__blue" type="button">Обратный звонок</button>
+            <button class="btn btn__blue" type="button" onclick="modalHandlerOpen('Заказать обратный звонок', 'modal__contact')">Обратный звонок</button>
         </div>
     </div>
 
@@ -318,8 +318,208 @@
     </nav>
 </div>
 
+<div class="modal modal__contact">
+  <div class="modal__content">
+       <h3 class="modal__title">
+       </h3>
+      <p class="modal__SubTitle">
+          Пожалуйста, заполните форму. Мы перезвоним в течение 5 минут
+      </p>
+      <form class="modal__form">
+          <div class="form-data">
+              <input class="form-data__item" type="text" placeholder="Ваше имя">
+
+              <input class="form-data__item" type="text" placeholder="+7 (000) 000 00 00" >
+          </div>
+          <div class="form__handler">
+              <button class="btn btn__blue btn-form__handler" type="button">Перезвоните мне</button>
+               <button class="btn btn__black modal__close" type="button" onclick="modalHandlerClose('contact')">Закрыть окно</button>
+          </div>
+      </form>
+      <div class="line line__white"></div>
+      <p class="modal__footer">
+          Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
+      </p>
+  </div>
+</div>
+
+<div class="modal modal__other">
+    <div class="modal__content">
+        <h3 class="modal__title">
+        </h3>
+        <p class="modal__SubTitle">
+            Пожалуйста, заполните форму. Мы перезвоним в течение 5 минут
+        </p>
+        <form class="modal__form">
+            <div class="form-data">
+                <input class="form-data__item" type="text" placeholder="Ваше имя">
+                <input class="form-data__item" type="text" placeholder="E-mail">
+                <input class="form-data__item" type="text" placeholder="Название отеля/гостиницы">
+                <input class="form-data__item" type="text" placeholder="+7 (000) 000 00 00" >
+            </div>
+            <div class="form__handler">
+                <button class="btn btn__blue btn-form__handler" type="button">Перезвоните мне</button>
+                <button class="btn btn__black modal__close" type="button" onclick="modalHandlerClose('other')">Закрыть окно</button>
+            </div>
+        </form>
+        <div class="line line__white"></div>
+        <p class="modal__footer">
+            Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
+        </p>
+    </div>
+</div>
+<style>
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.6);
+    }
+    .modal__contact {
+        padding-top: 100px;
+    }
+    .modal__other {
+        padding-top: 40px;
+    }
+    .modal__content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 550px;
+        background: white;
+        padding: 40px;
+        border-radius: 12px;
+    }
+    .modal__title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 45px;
+        text-transform: uppercase;
+        color: #1C2042;
+        margin-bottom: 10px;
+        margin-top: 0px;
+    }
+    .modal__SubTitle {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 26px;
+        color: #818B97;
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+    .form-data__item {
+        margin-bottom: 10px;
+        background: #F4F7FB;
+        border-radius: 4px;
+        padding: 15px 25px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 26px;
+        color: #818B97;
+        display: block;
+        width: 88%;
+        border: none;
+        outline: none;
+    }
+    .form__handler {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 40px;
+    }
+    .form__handler button:nth-child(1) {
+        margin-right: 10px;
+    }
+    .form__handler button:nth-child(2) {
+        margin-left: 10px;
+    }
+    .btn__black {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 12px;
+        line-height: 28px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #1C2042;
+        text-align: center;
+        background: white;
+        border: none;
+        height: 60px;
+
+    }
+    .btn-form__handler {
+        height: 60px;
+        border-radius: 146px;
+    }
+    .modal__footer {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 20px;
+        color: #818B97;
+        margin-top: 4px;
+        margin-bottom: 0px;
+    }
+    .modal__content {
+        animation-name: zoom;
+        animation-duration: 0.6s;
+    }
+
+    @keyframes zoom {
+        from {transform:scale(0)}
+        to {transform:scale(1)}
+    }
+    @media (max-width: 800px) {
+        .modal__title {
+            font-size: 20px;
+            line-height: 26px;
+        }
+        .modal__SubTitle {
+            font-size: 14px;
+            line-height: 20px;
+        }
+        .modal__content {
+            width: 80%;
+            max-width: 300px;
+            padding: 26px;
+        }
+    }
+</style>
 
 <script src="js/jquery.js"></script>
+
+<script>
+
+    const modalHandlerOpen = (title, className) => {
+        let modal = document.querySelector(`.${className}`);
+        document.querySelector(`.${className} .modal__title`).innerHTML = title;
+        modal.style.display = "block";
+    }
+
+    const modalHandlerClose = (type) => {
+        if (type === 'contact') {
+            let modal__contact = document.querySelector('.modal__contact');
+            modal__contact.style.display = "none";
+        }
+        if (type === 'other') {
+            let modal__other = document.querySelector('.modal__other');
+            modal__other.style.display = "none";
+        }
+
+    }
+
+
+</script>
 
 <script>
     $('.mobile div').on('click', () => {
